@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import AuthorQuiz from './AuthorQuiz';
 import * as serviceWorker from './serviceWorker';
+import {shuffle, sample} from 'underscore';
 
 const authors = [
     {
@@ -45,21 +46,48 @@ const authors = [
     }
 ];
 
+function getTurnData(authors) {
+    const allBooks = authors.reduce(function (p, c, i) {
+        return p.concat(c.books);
+    }, []);
+    const fourRandomBooks =  shuffle(allBooks).slice(0,4);
+
+    const answer = sample(fourRandomBooks);
+
+    return {
+        books: fourRandomBooks,
+        author: authors.find((author) =>
+            author.books.some((title) =>
+                title === answer))
+    }
+}
+
 
 
 const state = {
-    turnData :{
-        author : authors[0],
-        books : authors[0].books
-    }
-}
-ReactDOM.render(
-  <React.StrictMode>
-    <AuthorQuiz {...state}/>
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+    turnData : getTurnData(authors),
+    highLight : ' '
 
+};
+
+function checkResult(answers){
+
+    const stateResult = state.turnData.books.some((books)=>books===answers );
+
+    state.highLight = stateResult ? 'correct' : 'wrong';
+    rendered()
+}
+
+function rendered(){
+    ReactDOM.render(
+        <React.StrictMode>
+            < AuthorQuiz {...state} AddResultClick={checkResult}/>
+        </React.StrictMode>,
+        document.getElementById('root')
+    );
+}
+
+rendered();
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA

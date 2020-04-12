@@ -21,23 +21,37 @@ function Continue() {
     return (<div/>);
 }
 
-function Turn({author , books}) {
-    return(<div className="row turn"  style ={{backgroundColor : "white"}}>
+function Turn({author , books, highLight,onAnswerSelected}) {
+
+    function HighLightValues(highLight) {
+
+        const mapping = {
+            'none': '',
+            'wrong' : 'red',
+            'correct': 'green'
+        };
+
+        return mapping[highLight]
+    }
+
+
+
+
+    return(<div className="row turn"  style ={{backgroundColor : HighLightValues(highLight)}}>
         <div className="col-4 offset-1" >
             <img src={author.imageUrl}  className="authorimage" alt=  "Author"/>
         </div>
 
         <div className="col-6">
 
-            {books.map((data )=> <Book data={data} key={data} /> )}
+            {books.map((data )=> <Book data={data} key={data} onClick={onAnswerSelected}/> )}
 
         </div>
     </div>);
 }
 
-function Book({data}) {
-
-    return (<div className="answer">
+function Book({data,onClick}) {
+    return (<div className="answer" onClick={()=>{onClick(data);}}>
        <h4>{data}</h4>
     </div>)
 }
@@ -57,12 +71,12 @@ function Footer() {
 }
 
 
-function AuthorQuiz({turnData}) {
+function AuthorQuiz({turnData,highLight,AddResultClick}) {
   return (
     <div className="container-fluid">
 
         <Hero/>
-        <Turn {...turnData}/>
+        <Turn {...turnData } highLight={highLight} onAnswerSelected={AddResultClick}/>
         <Continue/>
 
         <Footer/>
