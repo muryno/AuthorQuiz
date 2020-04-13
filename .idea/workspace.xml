@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1514fffc-0751-4a0b-a7e3-1dcde1eaea40" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AuthorQuiz.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthorQuiz.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
@@ -154,6 +152,12 @@
           <url>file://$PROJECT_DIR$/src/AuthorQuiz.js</url>
           <line>19</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/index.js</url>
+          <line>72</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

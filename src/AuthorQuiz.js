@@ -71,12 +71,12 @@ function Footer() {
 }
 
 
-function AuthorQuiz({turnData,highLight,AddResultClick}) {
+function AuthorQuiz({turnData,highLight,onAnswerSelected}) {
   return (
     <div className="container-fluid">
 
         <Hero/>
-        <Turn {...turnData } highLight={highLight} onAnswerSelected={AddResultClick}/>
+        <Turn {...turnData } highLight={highLight} onAnswerSelected={onAnswerSelected}/>
         <Continue/>
 
         <Footer/>
