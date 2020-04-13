@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Route, withRouter } from 'react-router-dom';
 import './index.css';
 import AuthorQuiz from './AuthorQuiz';
 import * as serviceWorker from './serviceWorker';
@@ -77,11 +78,32 @@ function onAnswerSelected(answers){
     render()
 }
 
-function render(){
-    ReactDOM.render(
+function App() {
+    return (
         <React.StrictMode>
             < AuthorQuiz {...state} onAnswerSelected={onAnswerSelected}/>
-        </React.StrictMode>,
+        </React.StrictMode>
+    )
+}
+
+function AddUser() {
+
+    return (
+        <div>
+            <h1>This is the secon page</h1>
+            <p> we are testing</p>
+        </div>
+    )
+}
+function render(){
+    ReactDOM.render(
+        <BrowserRouter>
+            <React.Fragment>
+             <Route exact path="/" component={App}/>
+             <Route path="/add/" component={AddUser}/>
+            </React.Fragment>
+        </BrowserRouter>
+   ,
         document.getElementById('root')
     );
 }
