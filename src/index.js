@@ -5,6 +5,7 @@ import './index.css';
 import AuthorQuiz from './AuthorQuiz';
 import * as serviceWorker from './serviceWorker';
 import {shuffle, sample} from 'underscore';
+import AddAuthorForm from "./AddAuthorForm";
 
 const authors = [
     {
@@ -65,11 +66,7 @@ function getTurnData(authors) {
 
 
 
-const state = {
-    turnData : getTurnData(authors),
-    highLight : ' '
 
-};
 
 function onAnswerSelected(answers){
 
@@ -81,26 +78,42 @@ function onAnswerSelected(answers){
 function App() {
     return (
         <React.StrictMode>
-            < AuthorQuiz {...state} onAnswerSelected={onAnswerSelected}/>
+            < AuthorQuiz {...state} onAnswerSelected={onAnswerSelected} onContinue={
+                ()=>{
+                    state = resetState();
+                    render();
+                }
+
+            }/>
         </React.StrictMode>
     )
 }
 
-function AddUser() {
-
-    return (
-        <div>
-            <h1>This is the secon page</h1>
-            <p> we are testing</p>
-        </div>
-    )
+function resetState() {
+    return {
+        turnData: getTurnData(authors),
+        highlight: ''
+    };
 }
+
+let state = resetState();
+
+
+const AuthorWrapper = withRouter(({history})=>
+    <AddAuthorForm onAddAuthor={(author) => {
+        authors.push(author);
+        history.push('/');
+    }} />
+);
+
+
+
 function render(){
     ReactDOM.render(
         <BrowserRouter>
             <React.Fragment>
              <Route exact path="/" component={App}/>
-             <Route path="/add/" component={AddUser}/>
+             <Route path="/add/" component={AuthorWrapper}/>
             </React.Fragment>
         </BrowserRouter>
    ,

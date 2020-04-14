@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="1514fffc-0751-4a0b-a7e3-1dcde1eaea40" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/AddAuthorForm.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AddAuthorForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AuthorQuiz.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthorQuiz.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
@@ -12,6 +30,14 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="GOROOT" path="/usr/local/Cellar/go/1.13.4/libexec" />
   <component name="Git.Settings">
@@ -34,6 +60,7 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -73,12 +100,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1586795247579</updated>
-      <workItem from="1586795249491" duration="680000" />
+      <workItem from="1586795249491" duration="4785000" />
+      <workItem from="1586891914079" duration="6636000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -92,22 +132,22 @@
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state x="585" y="325" key="Github.ShareDialog/0.23.1440.804@0.23.1440.804" timestamp="1586533959762" />
-    <state width="1398" height="256" key="GridCell.Tab.0.bottom" timestamp="1586534199879">
+    <state width="1379" height="196" key="GridCell.Tab.0.bottom" timestamp="1586827763442">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state width="1398" height="256" key="GridCell.Tab.0.bottom/0.23.1440.804@0.23.1440.804" timestamp="1586534199879" />
-    <state width="1398" height="256" key="GridCell.Tab.0.center" timestamp="1586534199878">
+    <state width="1379" height="196" key="GridCell.Tab.0.bottom/0.23.1440.804@0.23.1440.804" timestamp="1586827763442" />
+    <state width="1379" height="196" key="GridCell.Tab.0.center" timestamp="1586827763441">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state width="1398" height="256" key="GridCell.Tab.0.center/0.23.1440.804@0.23.1440.804" timestamp="1586534199878" />
-    <state width="1398" height="256" key="GridCell.Tab.0.left" timestamp="1586534199877">
+    <state width="1379" height="196" key="GridCell.Tab.0.center/0.23.1440.804@0.23.1440.804" timestamp="1586827763441" />
+    <state width="1379" height="196" key="GridCell.Tab.0.left" timestamp="1586827763441">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state width="1398" height="256" key="GridCell.Tab.0.left/0.23.1440.804@0.23.1440.804" timestamp="1586534199877" />
-    <state width="1398" height="256" key="GridCell.Tab.0.right" timestamp="1586534199878">
+    <state width="1379" height="196" key="GridCell.Tab.0.left/0.23.1440.804@0.23.1440.804" timestamp="1586827763441" />
+    <state width="1379" height="196" key="GridCell.Tab.0.right" timestamp="1586827763442">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state width="1398" height="256" key="GridCell.Tab.0.right/0.23.1440.804@0.23.1440.804" timestamp="1586534199878" />
+    <state width="1379" height="196" key="GridCell.Tab.0.right/0.23.1440.804@0.23.1440.804" timestamp="1586827763442" />
     <state width="1398" height="256" key="GridCell.Tab.1.bottom" timestamp="1586534199881">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
@@ -171,7 +211,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/index.js</url>
-          <line>73</line>
+          <line>70</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
